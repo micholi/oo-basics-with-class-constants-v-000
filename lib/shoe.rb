@@ -12,7 +12,7 @@ class Shoe
 
   def brand=(brand)
     @brand = brand
-    BRANDS.none? {|temp_brand| temp_brand == brand}
+    BRANDS.map {|temp_brand| temp_brand != brand}
     BRANDS << brand
   end
 
