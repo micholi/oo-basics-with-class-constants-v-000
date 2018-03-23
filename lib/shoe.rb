@@ -4,17 +4,19 @@ class Shoe
 
   BRANDS = []
 
+  def brand=(brand)
+    @brand = brand
+    BRANDS.map {|temp_brand| temp_brand != brand}
+    BRANDS << brand
+  end
+
   def initialize(brand)
     @brand = brand
     #BRANDS.none? {|temp_brand| temp_brand == brand}
     #BRANDS << brand
   end
 
-  def brand=(brand)
-    @brand = brand
-    BRANDS.map {|temp_brand| temp_brand != brand}
-    BRANDS << brand
-  end
+  
 
   def cobble
     self.condition = "new"
