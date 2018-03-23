@@ -6,10 +6,6 @@ class Shoe
 
   def initialize(brand)
     BRANDS.none? {|temp_brand| temp_brand == brand}
-
-    @brand = brand
-    # BRANDS << brand if !BRANDS.include?
-    BRANDS.none? {|temp_brand| brand == temp_brand}
     BRANDS << brand
   end
 
