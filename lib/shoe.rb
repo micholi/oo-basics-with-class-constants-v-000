@@ -6,7 +6,7 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS.map ? {|temp_brand| temp_brand != @brand}
+    BRANDS.map {|temp_brand| temp_brand != @brand}
     BRANDS << brand
   end
 
